@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Q-Learning</title>
+</head>
+<body>
+   <div class="cursor"></div> 
+    <div class="wrapper">
+        <form action="">
+            <h1>Enter Values</h1>
+            <div class="input_box">
+                <input id='numberOfEpisodes' type="text" placeholder="Enter Number of Episodes" required>
+                <input id='slips' type="text" placeholder="Enter slip probability" required>
+               
+                <input id= 'epsilonValue' type="text" placeholder="Enter Epsilon Value" required>
+            </div>
+        </form>
+<div class="btns">
+
+    <button id= 'qlearning' type = 'submit' class="btn">Q-learning</button>
+    <button id= 'montecarlo' type = 'submit' class="btn">Monte Carlo</button>
+    <button id= 'sarsa' type = 'submit' class="btn">SARSA</button>
+</div>
+    </div>
+
+   <script src="cursor.js"></script>
+</body>
+</html>

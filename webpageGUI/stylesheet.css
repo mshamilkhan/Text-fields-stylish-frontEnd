@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    height: 100vh;
+    background: #0f0015;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: url('blueimg.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+:root{
+    --lightblue:#0084ff;
+}
+
+.cursor{
+    z-index: 999;
+    background: #b0d0fa;
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 0 0 20px #0084ff,
+                0 0 60px #0084ff,
+                0 0 100px #0084ff;
+    animation: colors 5s infinite;
+}
+
+@keyframes colors{
+    0%{
+        filter: hue-rotate(0deg)
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+.cursor:before{
+    content: '';
+    position: absolute; 
+    background: #0084ff;
+    width: 50px;
+    height: 50px;
+    opacity: 0.2;
+    transform: translate(-30%, -30%);
+    border-radius: 50%;
+}
+.wrapper{
+    /* background: #0084ff; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: 45rem;
+    border-radius: 10%;
+    border: 2px solid var(--lightblue);
+    padding: 4rem;
+    backdrop-filter: blur(7px);
+box-shadow: 0 0 10px rgba(0 , 0, 0, .4);
+}
+.wrapper .input_box{
+    margin: 1rem;
+    padding: 3rem;
+}
+.input_box input{
+    width: 30rem;
+    height: 4rem;
+    margin: 1rem;
+    border: 1px solid var(--lightblue);
+    background: #001946;
+    color: aliceblue;
+    transition: all 0.3s ease;
+    font-size: medium;
+}
+.input_box select{
+    width: 25rem;
+    height: 4rem;
+    background: #001946;
+    color: aliceblue;
+    transition: all 0.3s ease;
+    font-size: medium;
+}
+
+.input_box select:hover{
+    width: 27rem;
+    /* height: 5rem; */
+   border: 1px solid white;
+   cursor: pointer;
+}
+.input_box input:hover{
+    width: 34rem;
+    /* height: 5rem; */
+   border: 1px solid white;
+   cursor: pointer;
+}
+.btns{
+    width: 100%;
+}
+.btn{
+    width: 8rem;
+    border-radius: 10%;
+    border: none;
+    margin: 1rem;
+    padding: 1rem;
+    color: white;
+    background: #001946;
+transition: all 0.3s ease;
+}
+.btn:hover{
+width: 9rem;
+background-color: transparent;
+backdrop-filter: blur(20px);
+border: 1px solid #001946;
+/* color: #001946; */
+font-weight: bold;
+}
+
+input[type="text"]:placeholder-shown {
+    color: #f1f1f1; /* Placeholder text color */
+    padding: 1rem;
+  }
